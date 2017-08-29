@@ -1171,13 +1171,9 @@ var GeoLocationPage = (function () {
         this.geolocation.getCurrentPosition().then(function (res) {
             _this.location = {
                 lat: res.coords.latitude,
-                lng: res.coords.longitude
-            };
-            _this.map = {
-                lat: _this.location.lat,
-                lng: _this.location.lng,
+                lng: res.coords.longitude,
                 zoom: 12,
-                markerLabel: "Now You Are There!"
+                markerLabel: "You are here!"
             };
         });
     };
@@ -1186,7 +1182,7 @@ var GeoLocationPage = (function () {
 GeoLocationPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-geo-location',template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/pages/geo-location/geo-location.html"*/'<!--\n  Generated template for the GeoLocationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>GeoLocation</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <button ion-button full (click)="getGeoLocation()">GET GEOLOCATION</button>\n  <div *ngIf="location">\n    <h3>Latitude: {{location.lat}}</h3>\n    <h3>Latitude: {{location.lng}}</h3>\n    <div *ngIf="map!=null">\n      <agm-map [latitude]="map.lat" [longitude]="map.lng">\n        <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>\n      </agm-map>\n    </div>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/pages/geo-location/geo-location.html"*/,
+        selector: 'page-geo-location',template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/pages/geo-location/geo-location.html"*/'<!--\n  Generated template for the GeoLocationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>GeoLocation</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button ion-button full (click)="getGeoLocation()">GET GEOLOCATION</button>\n  <div *ngIf="location">\n    <h3>Latitude: {{location.lat}}</h3>\n    <h3>Longitude: {{location.lng}}</h3>\n    <agm-map [latitude]="location.lat" [longitude]="location.lng">\n      <agm-marker [latitude]="location.lat" [longitude]="location.lng"></agm-marker>\n    </agm-map>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/pages/geo-location/geo-location.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],

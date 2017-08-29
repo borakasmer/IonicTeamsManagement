@@ -25208,9 +25208,17 @@ page-game .divider-com {
   border-right: thin solid gray;
 }
 
+page-geo-location agm-map {
+  height: 300px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in;
+  transition: opacity 150ms ease-in;
+}
+
 page-map agm-map {
   height: 100%;
-  height: 100%;
+  width: 100%;
   opacity: 0;
   -webkit-transition: opacity 150ms ease-in;
   transition: opacity 150ms ease-in;

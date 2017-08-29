@@ -9,19 +9,15 @@
   <ion-navbar>
     <ion-title>GeoLocation</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
   <button ion-button full (click)="getGeoLocation()">GET GEOLOCATION</button>
   <div *ngIf="location">
     <h3>Latitude: {{location.lat}}</h3>
-    <h3>Latitude: {{location.lng}}</h3>
-    <div *ngIf="map!=null">
-      <agm-map [latitude]="map.lat" [longitude]="map.lng">
-        <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
-      </agm-map>
-    </div>
+    <h3>Longitude: {{location.lng}}</h3>
+    <agm-map [latitude]="location.lat" [longitude]="location.lng">
+      <agm-marker [latitude]="location.lat" [longitude]="location.lng"></agm-marker>
+    </agm-map>
   </div>
 </ion-content>

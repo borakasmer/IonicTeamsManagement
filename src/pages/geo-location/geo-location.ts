@@ -10,7 +10,7 @@ import { AgmCoreModule } from '@agm/core';
 })
 export class GeoLocationPage {
   map: any;
-  location: { lat: number, lng: number };
+  location: { lat: number, lng: number, zoom: number, markerLabel: string };
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private geolocation: Geolocation
@@ -25,14 +25,10 @@ export class GeoLocationPage {
     this.geolocation.getCurrentPosition().then((res) => {
       this.location = {
         lat: res.coords.latitude,
-        lng: res.coords.longitude        
-      };
-      this.map = {
-        lat: this.location.lat,
-        lng: this.location.lng,
+        lng: res.coords.longitude,
         zoom: 12,
-        markerLabel: "Now You Are There!"
-      }
+        markerLabel: "You are here!"
+      };
     });
   }
 }
