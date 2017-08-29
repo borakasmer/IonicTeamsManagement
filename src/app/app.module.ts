@@ -21,6 +21,10 @@ import { IonicStorageModule } from '@ionic/storage';
 import { MapPageModule } from "../pages/map/map.module";
 import { VibrationPageModule } from "../pages/vibration/vibration.module";
 import { Vibration } from "@ionic-native/vibration";
+import { Geolocation } from '@ionic-native/geolocation';
+import { GeoLocationPageModule } from "../pages/geo-location/geo-location.module";
+import { Camera } from '@ionic-native/camera';
+import { CameraPageModule } from "../pages/camera/camera.module";
 
 
 @NgModule({
@@ -40,7 +44,9 @@ import { Vibration } from "@ionic-native/vibration";
     TeamHomePageModule,
     HttpModule,
     MapPageModule,
-    VibrationPageModule
+    VibrationPageModule,
+    GeoLocationPageModule,
+    CameraPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,6 +59,8 @@ import { Vibration } from "@ionic-native/vibration";
     EliteApi,
     UserSettings,
     Vibration,
+    Geolocation,
+    Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

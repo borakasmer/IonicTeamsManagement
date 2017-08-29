@@ -9,6 +9,8 @@ import { UserSettings } from "../shared/user-settings.service";
 import { EliteApi } from "../shared/elite-api.services";
 import { TeamHomePage } from "../pages/pages";
 import { VibrationPage } from "../pages/vibration/vibration";
+import { GeoLocationPage } from "../pages/geo-location/geo-location";
+import { CameraPage } from "../pages/camera/camera";
 
 
 
@@ -66,7 +68,14 @@ export class MyApp {
   goVibration(){
     this.nav.push(VibrationPage);
   }
+  goGeoLocation(){
+    this.nav.push(GeoLocationPage);
+  }
   goTournaments() {
     this.nav.push(TournamentsPage);
   }
+  goCamera(){
+    this.nav.push(CameraPage);
+  }
+  
 }
