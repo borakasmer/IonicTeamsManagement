@@ -18,5 +18,10 @@
   <div *ngIf="location">
     <h3>Latitude: {{location.lat}}</h3>
     <h3>Latitude: {{location.lng}}</h3>
+    <div *ngIf="map!=null">
+      <agm-map [latitude]="map.lat" [longitude]="map.lng">
+        <agm-marker [latitude]="map.lat" [longitude]="map.lng"></agm-marker>
+      </agm-map>
+    </div>
   </div>
 </ion-content>
