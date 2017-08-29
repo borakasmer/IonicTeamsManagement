@@ -1,0 +1,29 @@
+<!--
+  Generated template for the TournamentsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Select a Tournament</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let item of tournaments" (click)="itemTapped($event,item)">
+      {{item.name}}
+    </button>
+    <!--  <button ion-item (click)="itemTapped()">
+      Summer Show Down
+    </button> -->
+  </ion-list>
+  <button ion-button icon-rewind (click)="goBack()">
+  <ion-icon name="rewind"></ion-icon>
+  Go Back
+</button>
+</ion-content>

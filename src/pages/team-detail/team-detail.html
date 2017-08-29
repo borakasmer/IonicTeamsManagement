@@ -1,0 +1,70 @@
+<!--
+  Generated template for the TeamDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <!--  <ion-title>{{team.name}}</ion-title> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Team Detail</h2>
+  <ion-refresher (ionRefresh)="refreshAll($event)">
+    <ion-refresher-content>
+
+    </ion-refresher-content>
+  </ion-refresher>
+  <!-- <h3>Name:{{team.name}}</h3> -->
+  <ion-card>
+    <ion-card-content *ngIf="teamStanding!=undifined">
+      <ion-row>
+        <ion-col width-50>
+          <h2>Record: {{teamStanding.wins}}--{{teamStanding.losses}}</h2>
+          <p>Coach: {{team.coach}}</p>
+        </ion-col>
+        <ion-col width-50 text-right>
+          <button outline (click)="toggleFollow()" *ngIf="!isFollowing">
+           <ion-icon name="star"></ion-icon>
+           Add Favorite
+         </button>
+          <button (click)="toggleFollow()" *ngIf="isFollowing">
+           <ion-icon name="star"></ion-icon>
+         </button>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-label>Select Date:</ion-label>
+        <ion-toggle [(ngModel)]="useDateFilter" (ionChange)="dateChanged()"> </ion-toggle>
+        <ion-datetime displayFormat="M/D/YYYY" pickerfORMAT="M/D/YYYY" [(ngModel)]="dateFilter" (ionChange)="dateChanged()" ([disabled])="!useDateFilter"></ion-datetime>
+
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item *ngFor="let game of games" (click)="gameClicked($event,game)">
+      <ion-row>
+        <ion-col width-20>
+          <p>{{game.time | date:'M/d/yy'}}</p>
+          <p>{{game.time | date:shortTime}}</p>
+        </ion-col>
+        <ion-col width-60>
+          <p>{{game.homeAway}} {{game.opponent}}</p>
+          <p>{{game.location}}</p>
+        </ion-col>
+        <ion-col width-20>
+          <h4>{{game.scoreDisplay}}</h4>
+          <ion-badge [color]="getScoreDisplayBadgeClass(game)">{{getScoreWorL(game)}}</ion-badge>
+        </ion-col>
+      </ion-row>
+      <!-- {{game.opponent}} -->
+    </ion-item>
+  </ion-list>
+
+  <button (click)="goHome()">Go Home</button>
+</ion-content>

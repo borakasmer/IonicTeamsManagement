@@ -1,0 +1,12 @@
+page-game {
+    $border-style:thin solid gray;
+
+    .top-bottom-border{
+        border-top:$border-style;
+        border-bottom:$border-style;
+    }
+
+    .divider-com{
+        border-right:$border-style;
+    }
+}
