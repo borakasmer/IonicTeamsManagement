@@ -43,12 +43,16 @@ export class StandingsPage {
   filterDivision() {
     if (this.divisionFilter === "all") {
       this.standings = this.allStandings;
+      console.log(JSON.stringify(this.standings));
     } else {
       this.standings = _.filter(this.allStandings, s => s.division === this.team.division);
     }
   }
 
   public getHeader(record, recordIndex, records) {
+    console.log("Record:" +JSON.stringify(record));
+    console.log("RecordIndex "+recordIndex);
+    console.log("Records: "+JSON.stringify(records));
     if (recordIndex === 0 || record.division != records[recordIndex - 1].division) {
       return record.division;
     }

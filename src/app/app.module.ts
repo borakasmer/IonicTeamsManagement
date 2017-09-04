@@ -20,11 +20,9 @@ import { UserSettings } from "../shared/user-settings.service";
 import { IonicStorageModule } from '@ionic/storage';
 import { MapPageModule } from "../pages/map/map.module";
 import { VibrationPageModule } from "../pages/vibration/vibration.module";
-import { Vibration } from "@ionic-native/vibration";
-import { Geolocation } from '@ionic-native/geolocation';
 import { GeoLocationPageModule } from "../pages/geo-location/geo-location.module";
-import { Camera } from '@ionic-native/camera';
 import { CameraPageModule } from "../pages/camera/camera.module";
+import { BarcodePageModule } from "../pages/barcode/barcode.module";
 
 
 @NgModule({
@@ -46,7 +44,8 @@ import { CameraPageModule } from "../pages/camera/camera.module";
     MapPageModule,
     VibrationPageModule,
     GeoLocationPageModule,
-    CameraPageModule
+    CameraPageModule,
+    BarcodePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,9 +57,6 @@ import { CameraPageModule } from "../pages/camera/camera.module";
     SplashScreen,
     EliteApi,
     UserSettings,
-    Vibration,
-    Geolocation,
-    Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

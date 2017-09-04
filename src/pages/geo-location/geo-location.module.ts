@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { GeoLocationPage } from './geo-location';
+import { Geolocation } from '@ionic-native/geolocation';
 import { AgmCoreModule } from "@agm/core";
 
 @NgModule({
@@ -13,5 +14,8 @@ import { AgmCoreModule } from "@agm/core";
       apiKey: 'AIzaSyBJRR34KTxiwTUQB9KIr2f_-oCFFri2Xfw'
     })
   ],
+  providers: [
+    Geolocation
+  ]
 })
 export class GeoLocationPageModule { }

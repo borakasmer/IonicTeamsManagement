@@ -11,6 +11,7 @@ import { TeamHomePage } from "../pages/pages";
 import { VibrationPage } from "../pages/vibration/vibration";
 import { GeoLocationPage } from "../pages/geo-location/geo-location";
 import { CameraPage } from "../pages/camera/camera";
+import { BarcodePage } from "../pages/barcode/barcode";
 
 
 
@@ -77,5 +78,7 @@ export class MyApp {
   goCamera(){
     this.nav.push(CameraPage);
   }
-  
+  goBarcode(){
+    this.nav.push(BarcodePage);
+  }
 }

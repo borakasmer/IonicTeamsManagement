@@ -17,6 +17,9 @@ webpackEmptyAsyncContext.id = 127;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/barcode/barcode.module": [
+		321
+	],
 	"../pages/camera/camera.module": [
 		318
 	],
@@ -274,7 +277,7 @@ var GamePage = (function () {
 GamePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-game',template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/pages/game/game.html"*/'<!--\n  Generated template for the GamePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>Game</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding *ngIf="game!=null">\n  <!-- <h3>Home Team</h3>\n  <button (click)="teamTapped(game.team1Id)">{{game.team1}}</button>\n  <h3>Away Team</h3>\n  <button (click)="teamTapped(game.team2Id)">{{game.team2}}</button> -->\n  <ion-row>\n    <ion-col width-50 text-center class="divider-col">\n      <button clear full (click)="teamTapped(game.team1Id)">Home</button>\n    </ion-col>\n    <ion-col width-50 text-center>\n      <button clear full (click)="teamTapped(game.team2Id)">Away</button>\n    </ion-col>\n  </ion-row>\n  <ion-row center>\n    <ion-col width-50 text-center class="divider-col" (click)="teamTapped(game.team1Id)">\n      <h4>{{game.team1}}</h4>\n    </ion-col>\n    <ion-col width-50 text-center (click)="teamTapped(game.team2Id)">\n      <h4>{{game.team2}}</h4>\n    </ion-col>\n  </ion-row>\n  <ion-row baseline class="top-bottom-border">\n    <ion-col text-center (click)="teamTapped(game.team1Id)">\n      <h1 [class.primary-color]="isWinner(game.team1Score,game.team2Score)">{{game.team1Score}}</h1>\n    </ion-col>\n    <ion-col text-center>Score</ion-col>\n    <ion-col text-center (click)="teamTapped(game.team2Id)">\n      <h1 [class.primary-color]="isWinner(game.team2Score,game.team1Score)">{{game.team2Score}}</h1>\n    </ion-col>\n  </ion-row>\n  <ion-card>\n    <ion-item>\n      <ion-icon name="calendar" item-left></ion-icon>\n      {{game.gameTime | date:\'M/d/yy\'}} {{game.gameTime | date:\'shortTime\'}}\n    </ion-item>\n    <ion-row>\n      <ion-col width-60>\n        <ion-label>{{game.location}}</ion-label>\n      </ion-col>\n      <ion-col width-40 text-right>\n        <button outline (click)="goToMap()">\n          <ion-icon name="map"></ion-icon>\n        </button>\n        <button outline (click)="goToDirections()">\n            <ion-icon name="navigate"></ion-icon>\n          </button>\n      </ion-col>\n    </ion-row>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/pages/game/game.html"*/,
+        selector: 'page-game',template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/pages/game/game.html"*/'<!--\n  Generated template for the GamePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>Game</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding *ngIf="game!=null">\n  <!-- <h3>Home Team</h3>\n  <button (click)="teamTapped(game.team1Id)">{{game.team1}}</button>\n  <h3>Away Team</h3>\n  <button (click)="teamTapped(game.team2Id)">{{game.team2}}</button> -->\n  <ion-row>\n    <ion-col width-50 text-center class="divider-col">\n      <button clear full (click)="teamTapped(game.team1Id)">Home</button>\n    </ion-col>\n    <ion-col width-50 text-center>\n      <button clear full (click)="teamTapped(game.team2Id)">Away</button>\n    </ion-col>\n  </ion-row>\n  <ion-row center>\n    <ion-col width-50 text-center class="divider-col" (click)="teamTapped(game.team1Id)">\n      <h4>{{game.team1}}</h4>\n    </ion-col>\n    <ion-col width-50 text-center (click)="teamTapped(game.team2Id)">\n      <h4>{{game.team2}}</h4>\n    </ion-col>\n  </ion-row>\n  <ion-row baseline class="top-bottom-border">\n    <ion-col text-center (click)="teamTapped(game.team1Id)">\n      <h1 [class.text-primary]="isWinner(game.team1Score,game.team2Score)">{{game.team1Score}}</h1>\n    </ion-col>\n    <ion-col text-center>Score</ion-col>\n    <ion-col text-center (click)="teamTapped(game.team2Id)">\n      <h1 [class.text-primary]="isWinner(game.team2Score,game.team1Score)">{{game.team2Score}}</h1>\n    </ion-col>\n  </ion-row>\n  <ion-card>\n    <ion-item>\n      <ion-icon name="calendar" item-left></ion-icon>\n      {{game.gameTime | date:\'M/d/yy\'}} {{game.gameTime | date:\'shortTime\'}}\n    </ion-item>\n    <ion-row>\n      <ion-col width-60>\n        <ion-label>{{game.location}}</ion-label>\n      </ion-col>\n      <ion-col width-40 text-right>\n        <button outline (click)="goToMap()">\n          <ion-icon name="map"></ion-icon>\n        </button>\n        <button outline (click)="goToDirections()">\n            <ion-icon name="navigate"></ion-icon>\n          </button>\n      </ion-col>\n    </ion-row>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/pages/game/game.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
@@ -397,7 +400,7 @@ TeamsPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_shared__ = __webpack_require__(418);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shared_shared__ = __webpack_require__(421);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -574,11 +577,11 @@ TeamDetailPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(172);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(406);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__(407);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__ = __webpack_require__(409);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -647,7 +650,7 @@ EliteApi = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shared_elite_api_services__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_Lodash__ = __webpack_require__(419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_Lodash__ = __webpack_require__(422);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_Lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_Lodash__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -693,12 +696,16 @@ var StandingsPage = (function () {
         var _this = this;
         if (this.divisionFilter === "all") {
             this.standings = this.allStandings;
+            console.log(JSON.stringify(this.standings));
         }
         else {
             this.standings = __WEBPACK_IMPORTED_MODULE_3_Lodash__["filter"](this.allStandings, function (s) { return s.division === _this.team.division; });
         }
     };
     StandingsPage.prototype.getHeader = function (record, recordIndex, records) {
+        console.log("Record:" + JSON.stringify(record));
+        console.log("RecordIndex " + recordIndex);
+        console.log("Records: " + JSON.stringify(records));
         if (recordIndex === 0 || record.division != records[recordIndex - 1].division) {
             return record.division;
         }
@@ -709,7 +716,7 @@ var StandingsPage = (function () {
 StandingsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-standings',template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/pages/standings/standings.html"*/'<!--\n  Generated template for the StandingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <!-- <ion-title>Standings</ion-title> -->\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-segment color="secondary" [(ngModel)]="divisionFilter" (ionChange)="filterDivision($event)">\n      <ion-segment-button value="division">Division</ion-segment-button>\n      <ion-segment-button value="all">All</ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- <h2>Standings</h2> -->\n  <ion-list [virtualScroll]="standings" [approxItemHeight]="\'132px\'" [headerFn]="getHeader">\n    <ion-item-divider color="secondary" *virtualHeader="let header">\n      {{header}}\n    </ion-item-divider>\n    <ion-item *virtualItem="let team">\n      <ion-row>\n        <ion-col>\n          <h2 color="primary"> {{team.teamName}}</h2>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col>\n          <h4>Wins</h4>\n        </ion-col>\n        <ion-col>\n          <h4>Losses</h4>\n        </ion-col>\n        <ion-col>\n          <h4>Pct</h4>\n        </ion-col>\n        <ion-col>\n          <h4>PF</h4>\n        </ion-col>\n        <ion-col>\n          <h4>PA</h4>\n        </ion-col>\n        <ion-col>\n          <h4>Diff</h4>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col>\n          <h4>{{team.wins}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.losses}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.winningPct}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.pointsFor}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.pointsAgainst}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.pointsDiff}}</h4>\n        </ion-col>\n      </ion-row>\n    </ion-item>\n  </ion-list>\n  <ion-list>\n    <ion-item-group *ngFor=\'let division of allStandings\'>\n\n      <ion-item *ngFor="let team of division.divisionStandings">\n\n      </ion-item>\n    </ion-item-group>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/pages/standings/standings.html"*/,
+        selector: 'page-standings',template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/pages/standings/standings.html"*/'<!--\n  Generated template for the StandingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <!-- <ion-title>Standings</ion-title> -->\n  </ion-navbar>\n  <ion-toolbar>\n    <ion-segment color="secondary" [(ngModel)]="divisionFilter" (ionChange)="filterDivision($event)">\n      <ion-segment-button value="division">Division</ion-segment-button>\n      <ion-segment-button value="all">All</ion-segment-button>\n    </ion-segment>\n  </ion-toolbar>\n</ion-header>\n\n\n<ion-content padding>\n  <!-- <h2>Standings</h2> -->\n  <ion-list [virtualScroll]="standings" [approxItemHeight]="\'132px\'" [headerFn]="getHeader">\n    <ion-item-divider color="secondary" *virtualHeader="let header">\n      {{header}}\n    </ion-item-divider>\n    <ion-item *virtualItem="let team">\n      <ion-row>\n        <ion-col>\n          <h2 color="primary"> {{team.teamName}}</h2>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col>\n          <h4>Wins</h4>\n        </ion-col>\n        <ion-col>\n          <h4>Losses</h4>\n        </ion-col>\n        <ion-col>\n          <h4>Pct</h4>\n        </ion-col>\n        <ion-col>\n          <h4>PF</h4>\n        </ion-col>\n        <ion-col>\n          <h4>PA</h4>\n        </ion-col>\n        <ion-col>\n          <h4>Diff</h4>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col>\n          <h4>{{team.wins}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.losses}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.winningPct}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.pointsFor}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.pointsAgainst}}</h4>\n        </ion-col>\n        <ion-col>\n          <h4>{{team.pointsDiff}}</h4>\n        </ion-col>\n      </ion-row>\n    </ion-item>\n  </ion-list>\n  <!-- <ion-list>\n    <ion-item-group *ngFor=\'let division of allStandings\'>\n\n      <ion-item *ngFor="let team of division.divisionStandings">\n\n      </ion-item>\n    </ion-item-group>\n  </ion-list> -->\n</ion-content>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/pages/standings/standings.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__shared_elite_api_services__["a" /* EliteApi */]])
 ], StandingsPage);
@@ -1010,12 +1017,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vibration__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__ = __webpack_require__(313);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1032,6 +1041,9 @@ VibrationPageModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__vibration__["a" /* VibrationPage */]),
         ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__["a" /* Vibration */]
+        ]
     })
 ], VibrationPageModule);
 
@@ -1103,13 +1115,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__geo_location__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__agm_core__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__agm_core__ = __webpack_require__(173);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1126,10 +1140,13 @@ GeoLocationPageModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__geo_location__["a" /* GeoLocationPage */]),
-            __WEBPACK_IMPORTED_MODULE_3__agm_core__["a" /* AgmCoreModule */].forRoot({
+            __WEBPACK_IMPORTED_MODULE_4__agm_core__["a" /* AgmCoreModule */].forRoot({
                 apiKey: 'AIzaSyBJRR34KTxiwTUQB9KIr2f_-oCFFri2Xfw'
             })
         ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_geolocation__["a" /* Geolocation */]
+        ]
     })
 ], GeoLocationPageModule);
 
@@ -1202,12 +1219,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__camera__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__ = __webpack_require__(320);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1224,6 +1243,9 @@ CameraPageModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__camera__["a" /* CameraPage */]),
         ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */]
+        ]
     })
 ], CameraPageModule);
 
@@ -1294,6 +1316,114 @@ CameraPage = __decorate([
 
 /***/ }),
 
+/***/ 321:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BarcodePageModule", function() { return BarcodePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__barcode__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__ = __webpack_require__(323);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var BarcodePageModule = (function () {
+    function BarcodePageModule() {
+    }
+    return BarcodePageModule;
+}());
+BarcodePageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__barcode__["a" /* BarcodePage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__barcode__["a" /* BarcodePage */]),
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]
+        ]
+    })
+], BarcodePageModule);
+
+//# sourceMappingURL=barcode.module.js.map
+
+/***/ }),
+
+/***/ 322:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BarcodePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__ = __webpack_require__(323);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the BarcodePage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var BarcodePage = (function () {
+    function BarcodePage(navCtrl, navParams, barcodeScanner) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.barcodeScanner = barcodeScanner;
+    }
+    BarcodePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad BarcodePage');
+    };
+    BarcodePage.prototype.scanBarcode = function () {
+        var _this = this;
+        this.barcodeScanner.scan().then(function (barcodeData) {
+            return _this.results = barcodeData;
+        }), function (err) {
+            alert('Error : ${err}');
+        };
+    };
+    ;
+    BarcodePage.prototype.reset = function () {
+        this.results = null;
+    };
+    BarcodePage.prototype.lookup = function () {
+        window.open("http://www.upcindex.com/" + this.results.text, '_system');
+    };
+    return BarcodePage;
+}());
+BarcodePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-barcode',template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/pages/barcode/barcode.html"*/'<!--\n  Generated template for the BarcodePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Barcode</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <button ion-button full (click)="scanBarcode()">SCAN</button>\n  <button ion-button full (click)="reset()" color="secondary">RESET</button>\n  <div *ngIf="results">\n    <h2>Format: {{results.format}}</h2>\n    <h2>Text: {{results.text}}</h2>\n\n    <button ion-button full (click)="lookup()">Lookup</button>\n  </div>\n</ion-content>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/pages/barcode/barcode.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_native_barcode_scanner__["a" /* BarcodeScanner */]])
+], BarcodePage);
+
+//# sourceMappingURL=barcode.js.map
+
+/***/ }),
+
 /***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1320,13 +1450,13 @@ CameraPage = __decorate([
 
 /***/ }),
 
-/***/ 362:
+/***/ 365:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(363);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(380);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(383);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1334,7 +1464,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 380:
+/***/ 383:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1342,9 +1472,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(445);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(360);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(448);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_my_teams_my_teams_module__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tournaments_tournaments_module__ = __webpack_require__(309);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_teams_teams_module__ = __webpack_require__(308);
@@ -1359,19 +1489,15 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_storage__ = __webpack_require__(186);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_map_map_module__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_vibration_vibration_module__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_vibration__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_geolocation__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_geo_location_geo_location_module__ = __webpack_require__(315);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_camera__ = __webpack_require__(320);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_camera_camera_module__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_geo_location_geo_location_module__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_camera_camera_module__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_barcode_barcode_module__ = __webpack_require__(321);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
 
 
 
@@ -1419,7 +1545,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/my-teams/my-teams.module#MyTeamsPageModule', name: 'MyTeamsPage', segment: 'my-teams', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/vibration/vibration.module#VibrationPageModule', name: 'VibrationPage', segment: 'vibration', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/geo-location/geo-location.module#GeoLocationPageModule', name: 'GeoLocationPage', segment: 'geo-location', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/camera/camera.module#CameraPageModule', name: 'CameraPage', segment: 'camera', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/camera/camera.module#CameraPageModule', name: 'CameraPage', segment: 'camera', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/barcode/barcode.module#BarcodePageModule', name: 'BarcodePage', segment: 'barcode', priority: 'low', defaultHistory: [] }
                 ]
             }),
             __WEBPACK_IMPORTED_MODULE_17__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
@@ -1433,8 +1560,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__angular_http__["b" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_18__pages_map_map_module__["MapPageModule"],
             __WEBPACK_IMPORTED_MODULE_19__pages_vibration_vibration_module__["VibrationPageModule"],
-            __WEBPACK_IMPORTED_MODULE_22__pages_geo_location_geo_location_module__["GeoLocationPageModule"],
-            __WEBPACK_IMPORTED_MODULE_24__pages_camera_camera_module__["CameraPageModule"]
+            __WEBPACK_IMPORTED_MODULE_20__pages_geo_location_geo_location_module__["GeoLocationPageModule"],
+            __WEBPACK_IMPORTED_MODULE_21__pages_camera_camera_module__["CameraPageModule"],
+            __WEBPACK_IMPORTED_MODULE_22__pages_barcode_barcode_module__["BarcodePageModule"]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
         entryComponents: [
@@ -1446,9 +1574,6 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */],
             __WEBPACK_IMPORTED_MODULE_14__shared_elite_api_services__["a" /* EliteApi */],
             __WEBPACK_IMPORTED_MODULE_16__shared_user_settings_service__["a" /* UserSettings */],
-            __WEBPACK_IMPORTED_MODULE_20__ionic_native_vibration__["a" /* Vibration */],
-            __WEBPACK_IMPORTED_MODULE_21__ionic_native_geolocation__["a" /* Geolocation */],
-            __WEBPACK_IMPORTED_MODULE_23__ionic_native_camera__["a" /* Camera */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] }
         ]
     })
@@ -1458,7 +1583,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 417:
+/***/ 420:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -1707,11 +1832,11 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 417;
+webpackContext.id = 420;
 
 /***/ }),
 
-/***/ 418:
+/***/ 421:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1725,15 +1850,15 @@ webpackContext.id = 417;
 
 /***/ }),
 
-/***/ 445:
+/***/ 448:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(360);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_my_teams_my_teams__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_tournaments_tournaments__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_user_settings_service__ = __webpack_require__(57);
@@ -1742,6 +1867,7 @@ webpackContext.id = 417;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_vibration_vibration__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_geo_location_geo_location__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_camera_camera__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_barcode_barcode__ = __webpack_require__(322);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1751,6 +1877,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1815,6 +1942,9 @@ var MyApp = (function () {
     MyApp.prototype.goCamera = function () {
         this.nav.push(__WEBPACK_IMPORTED_MODULE_11__pages_camera_camera__["a" /* CameraPage */]);
     };
+    MyApp.prototype.goBarcode = function () {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_12__pages_barcode_barcode__["a" /* BarcodePage */]);
+    };
     return MyApp;
 }());
 __decorate([
@@ -1822,7 +1952,7 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <ion-list-header>Navigate</ion-list-header>\n      <button menuClose ion-item (click)="goHome()"> <ion-icon name="home"></ion-icon>Home</button>\n      <button menuClose ion-item (click)="goVibration()"> <ion-icon name="pulse"></ion-icon>Vibration</button>\n      <button menuClose ion-item (click)="goGeoLocation()"> <ion-icon name="locate"></ion-icon>Geolocation</button>\n      <button menuClose ion-item (click)="goCamera()"> <ion-icon name="camera"></ion-icon>Camera</button>\n      <button menuClose ion-item (click)="goTournaments()">Find a Tournament</button>\n    </ion-list>\n    <ion-list>\n      <ion-list-header>Favorites</ion-list-header>\n      <button menuClose ion-item *ngFor="let fav of favoriteTeams" (click)="goToTeam(fav)">\n        {{fav.team.name}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/app/app.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/borakasmer/NavigateIonic/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <ion-list-header>Navigate</ion-list-header>\n      <button menuClose ion-item (click)="goHome()"> <ion-icon name="home"></ion-icon>Home</button>\n      <button menuClose ion-item (click)="goVibration()"> <ion-icon name="pulse"></ion-icon>Vibration</button>\n      <button menuClose ion-item (click)="goGeoLocation()"> <ion-icon name="locate"></ion-icon>Geolocation</button>\n      <button menuClose ion-item (click)="goCamera()"> <ion-icon name="camera"></ion-icon>Camera</button>\n      <button menuClose ion-item (click)="goBarcode()"><ion-icon name="barcode"></ion-icon>Barcode Scanner</button>\n      <button menuClose ion-item (click)="goTournaments()">Find a Tournament</button>      \n    </ion-list>\n    <ion-list>\n      <ion-list-header>Favorites</ion-list-header>\n      <button menuClose ion-item *ngFor="let fav of favoriteTeams" (click)="goToTeam(fav)">\n        {{fav.team.name}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/borakasmer/NavigateIonic/src/app/app.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
@@ -2006,7 +2136,7 @@ TournamentsPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserSettings; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(418);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(8);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -2057,5 +2187,5 @@ UserSettings = __decorate([
 
 /***/ })
 
-},[362]);
+},[365]);
 //# sourceMappingURL=main.js.map
