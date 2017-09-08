@@ -23,7 +23,9 @@ import { VibrationPageModule } from "../pages/vibration/vibration.module";
 import { GeoLocationPageModule } from "../pages/geo-location/geo-location.module";
 import { CameraPageModule } from "../pages/camera/camera.module";
 import { BarcodePageModule } from "../pages/barcode/barcode.module";
-
+import { DvcmotionPageModule } from "../pages/dvcmotion/dvcmotion.module";
+import { NotificationPageModule } from "../pages/notification/notification.module";
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { BarcodePageModule } from "../pages/barcode/barcode.module";
     VibrationPageModule,
     GeoLocationPageModule,
     CameraPageModule,
-    BarcodePageModule
+    BarcodePageModule,
+    DvcmotionPageModule,
+    NotificationPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,6 +61,7 @@ import { BarcodePageModule } from "../pages/barcode/barcode.module";
     SplashScreen,
     EliteApi,
     UserSettings,
+    SQLite,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

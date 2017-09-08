@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Platform } from 'ionic-angular';
 import { TournamentsPage } from "../tournaments/tournaments";
 import { EliteApi } from "../../shared/elite-api.services";
 import { TeamHomePage } from "../pages";
@@ -19,7 +19,7 @@ import { UserSettings } from "../../shared/user-settings.service";
 })
 export class MyTeamsPage {
 
-  favorites:any;
+  favorites: any;
   /*  {
      team: { id: 6182, name: 'HC Elite 7th', coach: 'Michelotti' },
      tournamentId: '89e13aa2-ba6d-4f55-9cc2-61eba6172c63',
@@ -34,7 +34,8 @@ export class MyTeamsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private loadingController: LoadingController,
     private eliteApi: EliteApi,
-    private userSettings: UserSettings
+    private userSettings: UserSettings,
+    public platform: Platform
   ) {
   }
   goToTournament() {
@@ -45,8 +46,14 @@ export class MyTeamsPage {
   }
   ionViewDidEnter() {
     console.log('ionViewDidEnter MyTeamsPage');
-    this.favorites = this.userSettings.getAllFavorites();
-    //console.log(this.favorites);
+    this.platform.ready().then(() => {
+      //this.favorites = this.userSettings.getAllFavorites();
+      this.userSettings.getTeams().then((result) => {
+        //alert(JSON.stringify(result));
+        this.favorites = result;
+      })
+      //console.log(this.favorites);
+    });
   }
   favoriteTapped($event, favorite) {
     let loader = this.loadingController.create({

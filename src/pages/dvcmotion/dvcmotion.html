@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar primary>
+    <button menuToggle>
+        <ion-icon name="menu"></ion-icon>      
+    </button>
+    <ion-title>Device Motiom</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button full (click)="startMonitor()">Start Motion</button>
+  <button ion-button full color="secondary" (click)="stopMonitor()">Stop Motion</button>
+  <ion-card *ngIf="data">
+    <ion-card-content>
+      <h2>x: {{data.x | number:'1.4-4'}}</h2>
+      <h2>y: {{data.y | number:'1.4-4'}}</h2>
+      <h2>z: {{data.z | number:'1.4-4'}}</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
